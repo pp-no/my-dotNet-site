@@ -1,0 +1,43 @@
+@model List<SampleMvcApp.Models.Product>
+@{
+    var productList = Model;
+}
+
+<div class="container mt-4">
+    <h1 class="mb-4">商品一覧</h1>
+
+    <a class="btn btn-primary mb-3" href="/Product/Create">新規登録</a>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>名前</th>
+                <th>価格</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in productList)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Name</td>
+                    <td>@item.Price</td>
+                    <td>
+                        <a class="btn btn-sm btn-outline-secondary" href="/Product/Edit/@item.Id">編集</a>
+                        <button class="btn btn-sm btn-outline-danger" onclick="confirmDelete(@item.Id)">削除</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<script>
+    function confirmDelete(id) {
+        if (confirm("本当に削除しますか？")) {
+            window.location.href = "/Product/Delete/" + id;
+        }
+    }
+</script>

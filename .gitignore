@@ -1,0 +1,53 @@
+## Build results
+bin/
+obj/
+out/
+
+## User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Visual Studio Code settings
+.vscode/
+.vs/
+
+## OS-specific files
+.DS_Store
+Thumbs.db
+
+## Logs
+*.log
+
+## Runtime-generated files
+app.db
+*.db
+*.db-journal
+
+## ASP.NET temporary files
+**/wwwroot/**/*.cache
+**/wwwroot/**/*.map
+**/wwwroot/**/*.min.*
+
+## Entity Framework Migrations history
+Migrations/
+
+## Node.js related (if frontendÇ≈égÇ¡ÇƒÇÈèÍçá)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+## Publish output
+publish/
+*.publish.xml
+
+## Secrets and sensitive configs
+secrets.json
+
+## Rider IDE specific
+.idea/
+
+## Optional: JetBrains ReSharper
+.ReSharper*/
+*.DotSettings.user

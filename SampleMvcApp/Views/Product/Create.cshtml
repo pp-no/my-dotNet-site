@@ -1,0 +1,29 @@
+<div class="container mt-4">
+    <h1 class="mb-4">商品登録</h1>
+
+    <!-- 全体のエラー一覧表示 -->
+    <div class="text-danger mb-3">
+        @Html.ValidationSummary()
+    </div>
+
+    <form method="post">
+        <div class="mb-3">
+            <label class="form-label">名前</label>
+            <input type="text" name="Name" class="form-control" value="@Model?.Name" required />
+            
+            <!-- 名前項目の個別エラー表示 -->
+            <span class="text-danger">@Html.ValidationMessage("Name")</span>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">価格</label>
+            <input type="number" name="Price" class="form-control" value="@Model?.Price" step="0.01" required />
+            
+            <!-- 価格項目の個別エラー表示 -->
+            <span class="text-danger">@Html.ValidationMessage("Price")</span>
+        </div>
+
+        <button type="submit" class="btn btn-primary">登録</button>
+        <a href="/Product/Index" class="btn btn-secondary">戻る</a>
+    </form>
+</div>
