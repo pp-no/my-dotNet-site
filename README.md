@@ -1,6 +1,7 @@
 # SampleMvcApp
 
 ASP.NET Core MVC + SQLite のサンプルアプリケーションです。
+SQLiteに保存しているデータを取得してリスト表示する処理を実装。
 
 ## 環境
 
